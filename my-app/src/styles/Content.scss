@@ -1,0 +1,17 @@
+@import "variables";
+
+#content{
+  max-width:$max-width;
+  margin:0 auto;
+}
+
+.App-content {
+  background-color: #e6e6e6;
+  height:1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
