@@ -4,6 +4,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import './styles/Content.scss';
+import Header from './Header'
+import Footer from './Footer'
 
 function ViewAll() {
   const [posts, setPosts] = useState([]);
@@ -23,24 +25,30 @@ function ViewAll() {
       loadPosts();
  }, [])
 return (
-  <Grid container spacing={2}>
-    {posts.map((post, index) => (
-    <Grid item xs={4} key={index}>
-      <Card>
-         <CardContent>
-              <Typography
-                  color="textSecondary"
-                  gutterBottom
-                  dangerouslySetInnerHTML={{__html: post.title.rendered}} />
-              <Typography
-                  variant="body2"
-                  component="p"
-                  dangerouslySetInnerHTML={{__html: post.content.rendered}} />
-          </CardContent>
-      </Card>
+  <React.Fragment>
+    <Header />
+    <main>
+    <Grid container spacing={2}>
+        {posts.map((post, index) => (
+        <Grid item xs={4} key={index}>
+        <Card>
+            <CardContent>
+                <Typography
+                    color="textSecondary"
+                    gutterBottom
+                    dangerouslySetInnerHTML={{__html: post.title.rendered}} />
+                <Typography
+                    variant="body2"
+                    component="p"
+                    dangerouslySetInnerHTML={{__html: post.content.rendered}} />
+            </CardContent>
+        </Card>
+        </Grid>
+    ))}
     </Grid>
-   ))}
-  </Grid>
+    </main>
+    <Footer />
+  </React.Fragment>
 );
 }
 

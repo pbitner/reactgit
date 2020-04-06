@@ -7,7 +7,7 @@ import './styles/variables.scss';
 function Home() {
   return (
     <div>
-        <h1>Home</h1>
+        Home
     </div>
   );
 }
