@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import './styles/Content.scss';
 
-function Content() {
+function ViewAll() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
       async function loadPosts() {
@@ -44,4 +44,4 @@ return (
 );
 }
 
-export default Content;
+export default ViewAll;
